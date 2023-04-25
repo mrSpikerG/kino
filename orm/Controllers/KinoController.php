@@ -5,7 +5,6 @@ include_once __DIR__."/ControllerBase.php";
 class KinoController extends ControllerBase
 {
 
-
     public function Insert()
     {
         // TODO: Implement Insert() method.
