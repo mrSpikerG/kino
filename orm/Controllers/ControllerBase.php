@@ -10,7 +10,7 @@ abstract class ControllerBase
         $this->conn=$conn;
     }
 
-    public abstract function Insert();
+    public abstract function Insert($Model);
     public abstract function Drop();
     public abstract function Select();
     public abstract function Update();

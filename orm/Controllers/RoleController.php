@@ -6,9 +6,10 @@ include_once __DIR__."/ControllerBase.php";
 class RoleController extends ControllerBase
 {
 
-    public function Insert()
+    public function Insert($model)
     {
-        // TODO: Implement Insert() method.
+        $sql_select = "INSERT INTO role(`RoleName`) VALUES ('{$model->getRoleName()}')";
+        return $this->conn->query($sql_select);
     }
 
     public function Drop()
@@ -18,7 +19,8 @@ class RoleController extends ControllerBase
 
     public function Select()
     {
-        // TODO: Implement Select() method.
+        $sql_select = 'SELECT * FROM role';
+        return $this->conn->query($sql_select);
     }
 
     public function SelectByName($roleName)

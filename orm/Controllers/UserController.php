@@ -6,9 +6,10 @@ include_once __DIR__."/ControllerBase.php";
 class UserController extends ControllerBase
 {
 
-    public function Insert()
+    public function Insert($model)
     {
-        // TODO: Implement Insert() method.
+        $sql_select = "INSERT INTO user(`Name`,`Password`,`Balance`,`IsPremium`) VALUES ('{$model->getName()}', '{$model->getPassword()}', 0, false) ";
+        return $this->conn->query($sql_select);
     }
 
     public function Drop()
@@ -18,7 +19,8 @@ class UserController extends ControllerBase
 
     public function Select()
     {
-        // TODO: Implement Select() method.
+        $sql_select = 'SELECT * FROM user';
+        return $this->conn->query($sql_select);
     }
 
     public function Update()

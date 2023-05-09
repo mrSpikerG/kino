@@ -5,7 +5,7 @@ include_once __DIR__."/ControllerBase.php";
 class KinoController extends ControllerBase
 {
 
-    public function Insert()
+    public function Insert($model)
     {
         // TODO: Implement Insert() method.
     }
@@ -17,15 +17,14 @@ class KinoController extends ControllerBase
 
     public function Select()
     {
-        // TODO: Implement Select() method.
+        $sql_select = 'SELECT * FROM kino';
+        return $this->conn->query($sql_select);
     }
 
     public function SelectById($id)
     {
-
         $sql_select = 'SELECT * FROM kino WHERE Id = '.$id;
         return $this->conn->query($sql_select);
-        // TODO: Implement Select() method.
     }
 
     public function Update()

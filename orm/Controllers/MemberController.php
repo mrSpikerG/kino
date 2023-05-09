@@ -5,7 +5,7 @@ include_once __DIR__."/ControllerBase.php";
 class MemberController extends ControllerBase
 {
 
-    public function Insert()
+    public function Insert($model)
     {
         // TODO: Implement Insert() method.
     }
